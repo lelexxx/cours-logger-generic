@@ -1,0 +1,16 @@
+{
+    "name": "cours-logger-generic",
+    "description": "Sample repository to present logger and generic type to students.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lelexxx/cours-logger-generic.git"
+    },
+    "author": "Alexandre Ruiz <rruiz.alex@gmail.com>",
+    "keywords": ["cours", "teach", "logger", "generic", "type"],
+    "devDependencies": {
+        "ts-loader": "^9.3.0",
+        "typescript": "^4.6.4",
+        "webpack": "^5.72.1",
+        "webpack-cli": "^4.10.0"
+    }
+}
