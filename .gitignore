@@ -3,6 +3,9 @@ node_modules/
 
 #ide
 .vscode/
+.vs/
+obj/
+bin/
 
 #webpack
 dist/
