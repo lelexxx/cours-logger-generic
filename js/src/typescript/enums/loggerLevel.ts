@@ -1,4 +1,4 @@
-enum LoggerLevel
+export enum LoggerLevel
 {
     Information,
     Debug,
