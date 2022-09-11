@@ -2,7 +2,7 @@ import { LoggerLevel } from "../enums/loggerLevel";
 import ILogger from "../interfaces/iLogger";
 
 export default class ConsoleLogger implements ILogger{
-    async callAndTrace<TResult>(action: Promise<TResult>): Promise<TResult>{
+    public async callAndTrace<TResult>(action: Promise<TResult>): Promise<TResult>{
         try{
             return await action.then(r => {
                 this.trace(LoggerLevel.Information, 'action call with success');
@@ -20,7 +20,7 @@ export default class ConsoleLogger implements ILogger{
         }
     }
 
-    trace<T>(level: LoggerLevel, message: T): void{
+    public trace<T>(level: LoggerLevel, message: T): void{
         switch(level){
             case LoggerLevel.Information :
                 console.info(message);
