@@ -1,4 +1,4 @@
-export default class Package<T>{
+export default class Package<T>{ //classe wrapper, c'est à dire qu'elle englobe un objet (image du colis)
     private content: T;
 
     constructor(content: T){
@@ -6,13 +6,14 @@ export default class Package<T>{
     }
 
     public async toString(): Promise<string>{
-        if(this.content === null)
+        if(this.content === null) {
             return null;
+        }
 
         return this.content.toString();
     }
 
     public async toJson(): Promise<object>{
-        return JSON.parse(this.content.toString());
+        return JSON.parse(JSON.stringify(this.content));
     }
 }
