@@ -6,7 +6,13 @@
         "url": "https://github.com/lelexxx/cours-logger-generic.git"
     },
     "author": "Alexandre Ruiz <rruiz.alex@gmail.com>",
-    "keywords": ["cours", "teach", "logger", "generic", "type"],
+    "keywords": [
+        "cours",
+        "teach",
+        "logger",
+        "generic",
+        "type"
+    ],
     "devDependencies": {
         "ts-loader": "^9.3.0",
         "typescript": "^4.6.4",
