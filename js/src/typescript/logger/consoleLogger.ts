@@ -11,11 +11,13 @@ export default class ConsoleLogger implements ILogger{
                     this.trace(LoggerLevel.Warning, 'action has a nullable result');
                 }
 
+                this.trace<TResult>(LoggerLevel.Debug, r);
+
                 return r;
             });
         }
-        catch{
-            this.trace(LoggerLevel.Error, 'action call with Error');
+        catch(e){
+            this.trace(LoggerLevel.Error, e);
             return null;
         }
     }
@@ -23,19 +25,19 @@ export default class ConsoleLogger implements ILogger{
     public trace<T>(level: LoggerLevel, message: T): void{
         switch(level){
             case LoggerLevel.Information :
-                console.info(message);
+                console.log('Information', message);
                 break;
             case LoggerLevel.Debug :
-                console.log(message);
+                console.log('Debug', message);
                 break;
             case LoggerLevel.Warning :
-                console.warn(message);
+                console.log('Warning', message);
                 break;
             case LoggerLevel.Error :
-                console.error(message);
+                console.error(message);//console.trace(message); + couleur rouge
                 break;
             case LoggerLevel.Critical :
-                console.error(message);
+                console.error(message);//console.trace(message); + couleur rouge
                 break;
         }
     }
