@@ -1,5 +1,6 @@
-import { LoggerType } from "../enums/loggerType";
-import ILogger from "../interfaces/iLogger";
+import { LoggerType } from "./enums/loggerType";
+import ILogger from "./interfaces/iLogger";
+import ApiLogger from "./apiLogger";
 import ConsoleLogger from "./consoleLogger";
 
 export default class LoggerManager {
@@ -7,8 +8,10 @@ export default class LoggerManager {
         switch(type){
             case LoggerType.Console:
                 return new ConsoleLogger();
+                case LoggerType.Api:
+                    return new ApiLogger();
             default:
-                throw new Error('Unknown logger');
+                throw new Error('Unknown logger'); //Dans le cas d'un switch sur un ENUM, toujours renvoyer une erreur si il y a un cas non prévu
         }
     }
 }

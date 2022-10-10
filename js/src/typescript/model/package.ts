@@ -1,4 +1,6 @@
-export default class Package<T>{ //classe wrapper, c'est à dire qu'elle englobe un objet (image du colis)
+import JsonSerializable from "./jsonSerializable";
+
+export default class Package<T> implements JsonSerializable{ //classe wrapper, c'est à dire qu'elle englobe un objet (image du colis)
     private content: T;
 
     constructor(content: T){
@@ -11,6 +13,10 @@ export default class Package<T>{ //classe wrapper, c'est à dire qu'elle englobe
         }
 
         return this.content.toString();
+    }
+
+    public async toJsonString(): Promise<string> {
+        return JSON.stringify(this.toJson());
     }
 
     public async toJson(): Promise<object>{
