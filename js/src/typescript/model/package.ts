@@ -16,10 +16,6 @@ export default class Package<T> implements JsonSerializable{ //classe wrapper, c
     }
 
     public async toJsonString(): Promise<string> {
-        return JSON.stringify(this.toJson());
-    }
-
-    public async toJson(): Promise<object>{
-        return JSON.parse(JSON.stringify(this.content));
+        return JSON.stringify(this);
     }
 }
