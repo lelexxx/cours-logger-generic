@@ -3,9 +3,7 @@ import { LoggerLevel } from "./enums/loggerLevel";
 import ILogger from "./interfaces/iLogger";
 
 export default abstract class BaseLogger implements ILogger{
-    public trace<T>(level: LoggerLevel, message: T): void {
-        throw new Error("Method not implemented.");
-    }
+    abstract trace<T>(level: LoggerLevel, message: T): void;
 
     public async callAndTrace<TResult>(action: Promise<TResult>): Promise<TResult>{
         try{
@@ -28,6 +26,6 @@ export default abstract class BaseLogger implements ILogger{
     }
 
     public traceJson<T extends JsonSerializable>(level: LoggerLevel, message: T): void {
-        this.trace(level, message.toJson());
+        this.trace(level, message);
     }
 }
