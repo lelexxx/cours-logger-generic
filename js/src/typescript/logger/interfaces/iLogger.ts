@@ -1,4 +1,3 @@
-import JsonSerializable from "../../model/jsonSerializable";
 import { LoggerLevel } from "../enums/loggerLevel";
 
 export default interface ILogger{
@@ -21,5 +20,5 @@ export default interface ILogger{
      * @param level Niveau du log attendu
      * @param message Message (sous forme d'objet) qui doit être log
      */
-    traceJson<T extends JsonSerializable>(level: LoggerLevel, message: T): void; //dans le cas de la généricité il est possible de préciser un héritage attendu
+    //traceJson<T extends JsonSerializable>(level: LoggerLevel, message: T): void; //dans le cas de la généricité il est possible de préciser un héritage attendu
 }

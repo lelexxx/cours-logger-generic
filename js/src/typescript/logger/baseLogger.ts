@@ -1,4 +1,3 @@
-import JsonSerializable from "../model/jsonSerializable";
 import { LoggerLevel } from "./enums/loggerLevel";
 import ILogger from "./interfaces/iLogger";
 
@@ -23,9 +22,5 @@ export default abstract class BaseLogger implements ILogger{
             this.trace(LoggerLevel.Error, e);
             return null;
         }
-    }
-
-    public traceJson<T extends JsonSerializable>(level: LoggerLevel, message: T): void {
-        this.trace(level, message);
     }
 }

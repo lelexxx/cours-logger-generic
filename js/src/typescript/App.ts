@@ -1,11 +1,11 @@
 import { LoggerLevel } from "./logger/enums/loggerLevel";
 import { LoggerType } from "./logger/enums/loggerType";
 import ILogger from "./logger/interfaces/iLogger";
-import LoggerManager from "./logger/loggerManager";
+import LoggerManager from "./logger/manager/loggerManager";
 import Package from "./model/package";
 import Timer from "./tools/timer";
 
-const loggerType = LoggerType.Api; //Changer la valeur pour basculer entre un logger API ou un logger console
+const loggerType = LoggerType.Console; //Changer la valeur pour basculer entre un logger API ou un logger console
 const logger: ILogger = LoggerManager.getLogger(loggerType);
 
 //Utilisation d'un timer pour regrouper les logs d'un même bloc de code ensemble (à cause de l'async)

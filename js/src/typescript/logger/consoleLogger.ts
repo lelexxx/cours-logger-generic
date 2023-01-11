@@ -1,5 +1,5 @@
-import { LoggerLevel } from "./enums/loggerLevel";
 import BaseLogger from "./baseLogger";
+import { LoggerLevel } from "./enums/loggerLevel";
 
 export default class ConsoleLogger extends BaseLogger{
     public trace<T>(level: LoggerLevel, message: T): void{
@@ -8,7 +8,7 @@ export default class ConsoleLogger extends BaseLogger{
                 console.log('Information', message);
                 break;
             case LoggerLevel.Debug :
-                console.log('Debug', message);
+                console.debug('Debug', message);
                 break;
             case LoggerLevel.Warning :
                 console.log('Warning', message);
