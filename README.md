@@ -1,8 +1,8 @@
-# LocalStorage
+# Logger
 
 ## Présentation
 
-Un `logger` est une plateforme CLOUD, développé par Google, qui propose un grand nombre de services.
+Un `logger` est un système permettant de remonter/sauvegarder des informations.
 
 Les `types génériques` sont une façon de développer des méthodes, classes qui fonctionneront peut importe le type d'objet reçu en paramètre.
 
@@ -18,8 +18,3 @@ NB : *Webpack est utilisé dans ce projet uniquement pour convertir le TypeScrip
 ## Ressources
 
 * [Console](https://developer.mozilla.org/fr/docs/Web/API/Console)
-* [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [Status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
-
-* [API REST d'exemple](https://reqres.in/)
-* [Collection Postman](https://www.getpostman.com/collections/5098e2284746269bfcd0)
